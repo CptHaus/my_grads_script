@@ -1,0 +1,12 @@
+function get_gdate(idate)
+
+ret = gsfallow('on')
+yyyy = substr(idate,1,4)
+mm   = substr(idate,5,2)
+dd   = substr(idate,7,2)
+hh   = substr(idata,9,2)
+mon = mm2mon(mm)
+gdate = hh % 'Z' % dd % mon % yyyy
+say 'get_gdate: 'idate' ---> 'gdate
+
+return gdate
