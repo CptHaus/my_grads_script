@@ -1,0 +1,17 @@
+function mm2mon(mm)
+
+if (mm = 1) ; mon = 'JAN' ; endif
+if (mm = 2) ; mon = 'FEB' ; endif
+if (mm = 3) ; mon = 'MAR' ; endif
+if (mm = 4) ; mon = 'APR' ; endif
+if (mm = 5) ; mon = 'MAY' ; endif
+if (mm = 6) ; mon = 'JUN' ; endif
+if (mm = 7) ; mon = 'JUL' ; endif
+if (mm = 8) ; mon = 'AUG' ; endif
+if (mm = 9) ; mon = 'SEP' ; endif
+if (mm = 10) ; mon = 'OCT' ; endif
+if (mm = 11) ; mon = 'NOV' ; endif
+if (mm = 12) ; mon = 'DEC' ; endif
+say 'mm2mon: 'mm' ---> 'mon
+
+return mon
