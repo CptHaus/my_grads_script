@@ -8,7 +8,7 @@ COLOR_PATH  = new_color
 # File names without their paths
 GDATE_FILE  = get_gdate.gsf
 MM2MON_FILE = mm2mon.gsf
-COLOR_FILE  = color_sample.jpg new_color.gs
+COLOR_FILE  = new_color.gs
 
 # File names with their paths
 GDATE  = ${GDATE_FILE:%=${GDATE_PATH}/%}
