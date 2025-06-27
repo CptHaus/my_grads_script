@@ -18,7 +18,3 @@ $ make install
 ```sh
 $ make uninstall
 ```
-
-## 新しいツールを作成したら
-新しいディレクトリを指定する変数を`FILES`の名前で定義します。Makefileから見た相対/絶対パスで書いてください。
-
