@@ -25,7 +25,7 @@ function make_ctl(resl,lon0,lon1,lat0,lat1,NX,NY)
   '!echo "zdef 1 linear 0 1" >> 'target
   '!echo "tdef 1 linear 00z01JAN2000 6hr" >> 'target
   '!echo "vars 1" >> 'target
-  '!echo "dummy 1 99 Dummy Grid Point Value" >> 'target
+  '!echo "dummy 0 99 Dummy Grid Point Value" >> 'target
   '!echo "ENDVARS" >> 'target
   '!echo " " >> 'target
 return
