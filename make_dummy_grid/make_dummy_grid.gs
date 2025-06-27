@@ -15,9 +15,8 @@ function main(args)
 return
 
 function make_ctl(resl,lon0,lon1,lat0,lat1,NX,NY)
-  '!rm dummy_grid.ctl'
   target = 'dummy_grid.ctl'
-  '!echo "dset ^./dummy_grid.bin" >> 'target
+  '!echo "dset ^./dummy_grid.bin" > 'target
   '!echo "undef 9.99e+8" >> 'target
   '!echo "title Dummy Grid" >> 'target
   '!echo "options big_endian" >> 'target
