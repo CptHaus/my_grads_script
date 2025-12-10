@@ -1,0 +1,17 @@
+function mon2mm(mon)
+
+if (mon = 'JAN') ; mm = '01' ; endif
+if (mon = 'FEB') ; mm = '02' ; endif
+if (mon = 'MAR') ; mm = '03' ; endif
+if (mon = 'APR') ; mm = '04' ; endif
+if (mon = 'MAY') ; mm = '05' ; endif
+if (mon = 'JUN') ; mm = '06' ; endif
+if (mon = 'JUL') ; mm = '07' ; endif
+if (mon = 'AUG') ; mm = '08' ; endif
+if (mon = 'SEP') ; mm = '09' ; endif
+if (mon = 'OCT') ; mm = '10' ; endif
+if (mon = 'NOV') ; mm = '11' ; endif
+if (mon = 'DEC') ; mm = '12' ; endif
+say 'mon2mm: 'mon' ---> 'mm
+
+return mm
