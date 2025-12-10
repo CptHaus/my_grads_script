@@ -1,11 +1,12 @@
 function get_date(format)
 
-if (format != 1 & fotmat != 2)
+say 'format = 'format
+if (format != 1 & format != 2)
     say 'Error: Wrong format'
     exit
 endif
 
-'q times'
+'q time'
 gdate = subwrd(result,3)
 len = math_strlen(gdate)
 if (len != 12 & len != 15)
