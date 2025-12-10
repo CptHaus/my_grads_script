@@ -1,0 +1,42 @@
+function get_date(format)
+
+if (format != 1 & fotmat != 2)
+    say 'Error: Wrong format'
+    exit
+endif
+
+'q times'
+gdate = subwrd(result,3)
+len = math_strlen(gdate)
+if (len != 12 & len != 15)
+    say 'Wrong length of GrADS date: 'gdate
+    exit
+endif
+
+if (len = 12)
+    yyyy = substr(gdate,9,4)
+    mon  = substr(gdate,6,3)
+    mm   = mon2mm(mon)
+    dd   = substr(gdate,4,2)
+    hh   = substr(gdate,1,2)
+    date1 = yyyy % '/' % mm % '/' % dd % ' ' % hh % ':00Z'
+    date2 = yyyy % '-' % mm % '-' % dd % ' ' % hh % ':00Z'
+else
+    yyyy = substr(gdate,12,4)
+    mon  = substr(gdate,9,3)
+    mm   = mon2mm(mon)
+    dd   = substr(gdate,7,2)
+    hh   = substr(gdate,1,2)
+    nn   = substr(gdate,4,2)
+    date1 = yyyy % '/' % mm % '/' % dd % ' ' % hh % ':' % nn % 'Z'
+    date2 = yyyy % '-' % mm % '-' % dd % ' ' % hh % ':' % nn % 'Z'
+endif
+
+if (format = 1)
+  date = date1
+else
+  date = date2
+endif
+say 'get_date: 'gdate' ---> 'date
+
+return date
