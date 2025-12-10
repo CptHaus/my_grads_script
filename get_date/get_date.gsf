@@ -1,4 +1,10 @@
-function get_date(format)
+function get_date(kind,format)
+
+say 'kind = 'kind
+if (kind != 'y' & kind != 'ym' & kind != 'ymd' & kind != 'ymdh' & kind != 'ymdhn')
+    say 'Error: Wrong kind'
+    exit
+endif
 
 say 'format = 'format
 if (format != 1 & format != 2)
@@ -20,6 +26,7 @@ if (len = 12)
     mm   = mon2mm(mon)
     dd   = substr(gdate,4,2)
     hh   = substr(gdate,1,2)
+    nn   = '00'
     date1 = yyyy % '/' % mm % '/' % dd % ' ' % hh % ':00Z'
     date2 = yyyy % '-' % mm % '-' % dd % ' ' % hh % ':00Z'
 else
@@ -38,6 +45,16 @@ if (format = 1)
 else
   date = date2
 endif
+
+if (kind = 'y') ; date = substr(date,1,4) ; endif
+if (kind = 'ym') ; date = substr(date,1,7) ; endif
+if (kind = 'ymd') ; date = substr(date,1,10) ; endif
+if (kind = 'ymdh')
+    date = substr(date,1,13)
+    date = date % 'Z'
+endif
+if (kind = 'ymdhn') ; date = substr(date,1,17) ; endif
+
 say 'get_date: 'gdate' ---> 'date
 
 return date
